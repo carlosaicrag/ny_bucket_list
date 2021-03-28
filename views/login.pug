@@ -1,0 +1,10 @@
+extends layout.pug 
+
+block content 
+  div welcome to the bucket list! 
+
+  form(action="/users/login", method="post") 
+    input(placeholder="firstname", name="user[lastName]")
+    input(placeholder="password", name="user[password]")
+
+    button(type="submit") signup
