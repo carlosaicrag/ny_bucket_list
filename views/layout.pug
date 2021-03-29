@@ -4,16 +4,28 @@ html(lang="en")
     meta(charset="UTF-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    link(href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@100&display=swap" rel="stylesheet")
+    link(rel="preconnect" href="https://fonts.gstatic.com")    
+    link(rel="stylesheet" href="/stylesheets/css/entry.css", type="text/css")
+    script(src="https://kit.fontawesome.com/943e5c3a6a.js" crossorigin="anonymous") 
+  
     title Document
   body 
+    div(class="header")
+      a(href="/" class="icon") 
+        <i class="fas fa-city fa-3x"></i>
+
+      div(class="signup-login-logout")
+        div(class="signup-login-logout-cont")
+          if session
+            div 
+            form(action="/users/logout", method="post") 
+              button(type="submit" class="nav-link") Logout
+              //- input(type="submit", value="Logout" class="nav-link")
+          else
+            a(href="/users/signup" class="nav-link") Signup 
+            a(href="/users/login" class="nav-link") Login
+    
     block content
-    if user
-      form(action="/users/logout", method="post") 
-        button(type="submit") Logout
-      a(href="/authorized_home") authorized home   
-    else
-      a(href="/users/signup") Signup 
-      a(href="/users/login") Login
-      a(href="/") Home
 
     

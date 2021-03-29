@@ -1,4 +1,24 @@
 extends layout.pug 
 
 block content 
-  div this is the home page
+  div(class="gallery-container")
+
+    each post,idx in posts
+      - var current_child = idx%5
+      if current_child == 0
+        div(class="gallery-first-child")
+          <a target="_blank" href="/">
+            <img class="home-page-img" src="https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIweW9yayUyMGNpdHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="city" width="600" height="400">
+          </a>
+          h1 Place
+      if current_child == 1 || current_child == 2
+        div(class="gallery-second-third-child")
+          <a target="_blank" href="/">
+            <img class="home-page-img" src="https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIweW9yayUyMGNpdHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="city" width="600" height="400">
+          </a>
+      if current_child == 3 || current_child == 4
+        div(class="gallery-fourth-fifth-child")
+          <a target="_blank" href="/">
+            <img class="home-page-img" src="https://images.unsplash.com/photo-1532960401447-7dd05bef20b0?ixid=MXwxMjA3fDB8MHxzZWFyY2h8M3x8bmV3JTIweW9yayUyMGNpdHl8ZW58MHx8MHw%3D&ixlib=rb-1.2.1&w=1000&q=80" alt="city" width="600" height="400">
+          </a>
+

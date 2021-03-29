@@ -4,9 +4,10 @@ block content
   div welcome to the bucket list! 
 
   form(action="/users", method="post") 
-    input(placeholder="firstname", name="user[firstName]")
-    input(placeholder="lastname", name="user[lastName]")
-    input(placeholder="email", name="user[email]")
-    input(placeholder="password", name="user[password]")
+    input(placeholder="firstname", name="firstName", value=user.firstName)
+    input(placeholder="username", name="username", value=user.username)
+    input(placeholder="lastname", name="lastName", value=user.lastName)
+    input(placeholder="email", name="email", value=user.email)
+    input(placeholder="password", name="password", value=user.password)
 
-    button(type="submit") signup
+    button(type="submit" class="nav-link") signup

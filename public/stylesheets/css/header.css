@@ -1,0 +1,26 @@
+.nav-link {
+  color: var(--secondary-color);
+  text-decoration: none;
+  font-size: 30px;
+  font-family: var(--primary-font);
+  cursor: pointer;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  margin: 10px;
+}
+
+.signup-login-logout {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.signup-login-logout-cont{
+  display: grid;
+  width: 150px;
+  grid-template-columns: 50% 50%;
+
+}
